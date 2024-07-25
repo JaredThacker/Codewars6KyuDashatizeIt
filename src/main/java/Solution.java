@@ -4,6 +4,7 @@ public class Solution {
 
     public static String dashatize(int num) {
         int absolute = Math.abs(num);
+        //should probably remove this
         if (num == Integer.MIN_VALUE){
             absolute = Integer.MAX_VALUE;
         }
@@ -11,6 +12,7 @@ public class Solution {
         String[] splitNum = stringNum.split("");
         StringBuilder sb = new StringBuilder();
 
+        //def refactor this somehow! since random tests arent passing i mustve hardcoded somewhere
         for (int i = 0; i < splitNum.length; i++){
             boolean isOdd = splitNum[i].equals("1") || splitNum[i].equals("3") || splitNum[i].equals("5") || splitNum[i].equals("7") || splitNum[i].equals("9");
             if (i != 0 && isOdd){
